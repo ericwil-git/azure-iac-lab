@@ -1,0 +1,25 @@
+trigger:
+  branches:
+    include:
+      - main
+
+variables:
+  azureSubscription: 'YOUR-SERVICE-CONNECTION-NAME'
+
+stages:
+- stage: Deploy
+  jobs:
+  - job: DeployInfrastructure
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: AzureCLI@2
+      inputs:
+        azureSubscription: $(azureSubscription)
+        scriptType: bash
+        scriptLocation: inlineScript
+        inlineScript: |
+          az deployment sub create \
+            --location eastus \
+            --template-file ./bicep/main.bicep \
+            --parameters ./bicep/parameters.json
