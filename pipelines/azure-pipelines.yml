@@ -6,6 +6,11 @@ trigger:
 variables:
   azureSubscription: 'YOUR-SERVICE-CONNECTION-NAME'
 
+
+pool:
+  name: swimming
+
+
 stages:
 - stage: Deploy
   jobs:
