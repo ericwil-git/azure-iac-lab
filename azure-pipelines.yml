@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: swimming
 
 steps:
 - script: echo Hello, world!
