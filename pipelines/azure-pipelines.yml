@@ -4,8 +4,7 @@ trigger:
       - main
 
 variables:
-  azureSubscription: 'YOUR-SERVICE-CONNECTION-NAME'
-
+  azureSubscription: 'InfraAC'
 
 pool:
   name: swimming
