@@ -7,7 +7,7 @@ variables:
   azureSubscription: 'InfraAC'
 
 pool:
-  name: 'Azure Pipelines'
+  name: Azure Pipelines
   
 
 
