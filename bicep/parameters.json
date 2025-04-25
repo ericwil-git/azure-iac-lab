@@ -1,12 +1,16 @@
-{   
-    "resourceGroupName": { "value": "rg-iac-lab" },
-    "location": { "value": "eastus" },
-    "vnetName": { "value": "vnet-iac-demo" },
-    "addressPrefix": { "value": "10.0.0.0/16" },
-    "subnet1Prefix": { "value": "10.0.1.0/24" },
-    "subnet2Prefix": { "value": "10.0.2.0/24" },
-    "vm1Name": { "value": "vm-iac-01" },
-    "vm2Name": { "value": "vm-iac-02" },
-    "adminUsername": { "value": "azureuser" },
-    "adminPassword": { "value": "SuperSecurePassword123!" }
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "location": { "value": "eastus" },
+      "resourceGroupName": { "value": "rg-iac-lab" },
+      "vnetName": { "value": "vnet-iac-demo" },
+      "addressPrefix": { "value": "10.0.0.0/16" },
+      "subnet1Prefix": { "value": "10.0.1.0/24" },
+      "subnet2Prefix": { "value": "10.0.2.0/24" },
+      "vm1Name": { "value": "vm-iac-01" },
+      "vm2Name": { "value": "vm-iac-02" },
+      "adminUsername": { "value": "azureuser" },
+      "adminPassword": { "value": "SuperSecurePassword123!" }
+    }
   }
