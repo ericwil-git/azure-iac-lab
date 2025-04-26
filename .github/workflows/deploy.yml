@@ -21,7 +21,7 @@ jobs:
     - name: Deploy Bicep Template
       uses: azure/arm-deploy@v2
       with:
-        scope: subscription
+        scope: resourceGroup
         resourcegroupname: rg-iac-lab
         region: eastus2
         template: ./bicep/main.bicep
