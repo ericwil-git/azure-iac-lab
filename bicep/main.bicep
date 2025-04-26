@@ -31,6 +31,7 @@ param adminUsername string
 @description('The administrator password for the VMs')
 param adminPassword string
 
+
 resource vnet 'Microsoft.Network/virtualNetworks@2021-02-01' = {
   name: '${resourceGroupName}-${vnetName}'
   location: location

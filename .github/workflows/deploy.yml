@@ -17,6 +17,10 @@ jobs:
       uses: azure/login@v2
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Ensure Resource Group Exists
+      run: |
+        az group create --name rg-iac-lab --location eastus2 || echo "Resource group already exists"
 
     - name: Deploy Bicep Template
       uses: azure/arm-deploy@v2
