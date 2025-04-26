@@ -23,6 +23,5 @@ jobs:
       with:
         scope: subscription
         resourcegroupname: rg-iac-lab
-        region: eastus2
         template: ./bicep/main.bicep
         parameters: ./bicep/parameters.json
