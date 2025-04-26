@@ -32,7 +32,7 @@ param adminUsername string
 param adminPassword string
 
 resource vnet 'Microsoft.Network/virtualNetworks@2021-02-01' = {
-  name: '${resourceGroupName}-vnet'
+  name: '${resourceGroupName}-${vnetName}'
   location: location
   properties: {
     addressSpace: {
