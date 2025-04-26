@@ -1,3 +1,5 @@
+targetScope = 'resourceGroup'
+
 @description('The Azure region for resource deployment')
 param location string
 
@@ -30,7 +32,7 @@ param adminUsername string
 param adminPassword string
 
 resource vnet 'Microsoft.Network/virtualNetworks@2021-02-01' = {
-  name: vnetName
+  name: '${resourceGroupName}-vnet'
   location: location
   properties: {
     addressSpace: {
